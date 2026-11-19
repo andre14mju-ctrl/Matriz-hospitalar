@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matriz Gerencial – Modelo</title>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section id="login-screen" aria-label="Tela de login">
+  <main class="container">
+    <form id="loginForm">
+      <div>
+        <h1>Login Matrizes</h1>
+        <div class="input-box">
+          <input id="loginUser" placeholder="Usuario" type="text" required autocomplete="username">
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input id="loginPass" placeholder="Senha" type="password" required autocomplete="current-password">
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+      </div>
+
+      <div class="remember-row">
+        <label>
+          <input id="rememberMe" type="checkbox">
+          Lembrar minha senha
+        </label>
+      </div>
+
+      <button type="submit" class="login">Login</button>
+    </form>
+  </main>
+</section>
+
+  <section id="cover">
+  <div class="cover-card">
+    <h1 class="cover-title">Gerenciamento de Comissões<br><strong>ABM</strong></h1>
+    <button class="primary-btn" id="enterBtn" type="button">Acessar a matriz →</button>
+  </div>
+</section>
+
+<div id="app" class="hidden">
+  <aside class="sidebar" aria-label="Navegação principal">
+    <nav class="nav-stack">
+      <button class="nav-btn" data-page="matrix" type="button"><img src="assets/Icones/matriz.svg" alt="Ícone Matriz" class="nav-icon"><span>Matriz</span></button>
+      <button class="nav-btn" data-page="organizacional" type="button">🧩<span>Estrutura</span></button>
+      <button class="nav-btn" data-page="comissoes" type="button">👥<span>Grupos</span></button>
+      <button class="nav-btn" data-page="paineis" type="button">📊<span>Painéis</span></button>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <strong>Matriz Gerencial – Associação beneficete de Maracaju</strong>
+      <div>
+        <button id="globalSearchBtn" class="secondary-btn" type="button">Pesquisar</button>
+        <button id="logoutBtn" class="secondary-btn logout-Btn" type="button">Sair</button>
+      </div>
+    </header>
+
+    <section id="page-matrix" class="page view">
+      <h1 class="page-title">Matriz</h1>
+      <p class="page-intro">Clique em uma caixa para abrir a etapa.</p>
+      <div class="panel matrix-scroll">
+        <div class="matrix-stage">
+          <img src="assets/matriz-placeholder.svg" alt="Desenho da matriz">
+          <button class="hotspot" data-step="0" style="left:50%;top:6.5%;width:28%;height:6.7%" aria-label="Etapa 0"></button>
+          <button class="hotspot" data-step="1" style="left:50%;top:19.7%;width:28%;height:6.7%" aria-label="Etapa 1"></button>
+          <button class="hotspot" data-step="3" style="left:26.9%;top:32.9%;width:24%;height:6.7%" aria-label="Etapa 3"></button>
+          <button class="hotspot" data-step="4" style="left:50%;top:32.9%;width:22%;height:6.7%" aria-label="Etapa 4"></button>
+          <button class="hotspot" data-step="5" style="left:73%;top:32.9%;width:24%;height:6.7%" aria-label="Etapa 5"></button>
+          <button class="hotspot" data-step="6" style="left:50%;top:46.1%;width:22%;height:6.7%" aria-label="Etapa 6"></button>
+          <button class="hotspot" data-step="7" style="left:36.3%;top:59.3%;width:22%;height:6.7%" aria-label="Etapa 7"></button>
+          <button class="hotspot" data-step="8" style="left:63.7%;top:59.3%;width:22%;height:6.7%" aria-label="Etapa 8"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-organizacional" class="page view hidden">
+      <h1 class="page-title">Estrutura</h1>
+      <div class="org-chart"><div class="org-flow">
+        <div class="org-node">Direção</div><div class="org-connector"></div>
+        <div class="org-node outline">Portaria</div><div class="org-connector"></div>
+        <div class="org-node strong">Grupos técnicos</div>
+        <div class="org-split">
+          <div class="branch"><div class="org-small">Monitor</div></div>
+          <div class="branch"><div class="org-small">Gestor</div></div>
+        </div>
+        <div class="org-merge"><div class="org-node outline" style="margin:auto;width:min(440px,80%)">Membros consultivos</div></div>
+      </div></div>
+    </section>
+
+    <section id="page-comissoes" class="page view hidden">
+      <h1 class="page-title">Grupos</h1>
+      <div id="commissionsGrid" class="commissions-grid"></div>
+    </section>
+
+    <section id="page-paineis" class="page view hidden">
+      <h1 class="page-title">Painéis</h1>
+      <div class="dashboard-layout">
+        <section class="dashboard-section">
+          <h2>Gestão geral</h2>
+          <div class="dashboard-links">
+            <a class="dashboard-link" href="#" target="_blank" rel="noopener noreferrer"><span class="dashboard-link-text"><strong>Painel gerencial</strong><small>Visão geral</small></span><span>↗</span></a>
+            <a class="dashboard-link" href="#" target="_blank" rel="noopener noreferrer"><span class="dashboard-link-text"><strong>Rotinas</strong><small>Acompanhamento</small></span><span>↗</span></a>
+          </div>
+        </section>
+        <section class="dashboard-section">
+          <h2>Indicadores</h2>
+          <div class="indicator-links">
+            <a href="#" target="_blank" rel="noopener noreferrer"><span>Resumo</span><span>↗</span></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><span>2026</span><span>↗</span></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><span>2025</span><span>↗</span></a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="page-detail" class="page view hidden">
+      <div class="detail-shell">
+        <aside class="step-nav"><h3>Etapas</h3><div id="stepNavItems"></div></aside>
+        <article class="detail-card" id="detailContent"></article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div id="globalSearchOverlay" class="global-search-overlay hidden" role="dialog" aria-modal="true">
+  <div class="global-search-card">
+    <input id="globalSearchInput" type="search" placeholder="Pesquisar etapas e grupos…" autocomplete="off">
+    <div id="globalSearchResults" aria-live="polite"></div>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

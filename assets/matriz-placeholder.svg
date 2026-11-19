@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1367" font-family="Arial" font-size="38" text-anchor="middle">
+<rect width="2048" height="1367" fill="#fdfefe"/>
+<g fill="#e5eefb" stroke="#0b57b7" stroke-width="3">
+<rect x="740" y="40" width="568" height="92" rx="46"/><rect x="740" y="220" width="568" height="92" rx="46"/>
+<rect x="300" y="400" width="500" height="92" rx="46"/><rect x="800" y="400" width="448" height="92" rx="46"/><rect x="1248" y="400" width="500" height="92" rx="46"/>
+<rect x="800" y="580" width="448" height="92" rx="46"/><rect x="520" y="760" width="448" height="92" rx="46"/><rect x="1080" y="760" width="448" height="92" rx="46"/>
+</g>
+<g fill="#0b3f86"><text x="1024" y="98">0. Indicação inicial</text><text x="1024" y="278">1. Requisitos</text>
+<text x="550" y="458">3. Caracterização</text><text x="1024" y="458">4. Escopo</text><text x="1498" y="458">5. Instrumentos</text>
+<text x="1024" y="638">6. Regimento</text><text x="744" y="818">7. Composição</text><text x="1304" y="818">8. Portaria</text></g>
+<text x="1024" y="1300" fill="#64748b" font-size="30">Substitua este SVG pela imagem da sua matriz (mesmas proporções 2048×1367)</text>
+</svg>
